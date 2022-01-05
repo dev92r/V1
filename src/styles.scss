@@ -1,1 +1,364 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('../node_modules/font-awesome/css/font-awesome.min.css');
+
+body {
+    font-family: 'Roboto Slab', serif;
+    line-height: 1.1;
+    background: #f0fafd;
+    z-index: 999;
+}
+
+/*** Fonts ***/
+h1,h2,h3,h4,h5,h6,p {
+    color: #007ea7;
+    line-height: 1.5;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.fw-500 {
+    font-weight: 500;
+}
+
+$fz-xsm: 1rem;
+$fz-sm: 1.25rem;
+$fz-md: 2rem;
+$fz-lg: 2.5rem;
+$fz-xl: 2.75rem;
+$fz-xxl: 3rem;
+$fz-heading: 3.25rem;
+
+@mixin custom-font($fontsize, $fontweight, $fontcolor){
+    color: $fontcolor;
+    font-size: $fontsize;
+    font-weight: $fontweight;
+}
+.page-title {
+    @include custom-font($fz-heading , 400, #007ea7);
+}
+.f-h1 {
+    @include custom-font($fz-xxl , 400, #007ea7);
+}
+.f-h2 {
+    @include custom-font($fz-xl , 400, #007ea7);
+}
+.f-h3 {
+    @include custom-font($fz-lg , 300, #007ea7);
+}
+.f-h4 {
+    @include custom-font($fz-md , 300, #007ea7);
+}
+.f-h5 {
+    @include custom-font($fz-sm , 300, #007ea7);
+}
+.f-h6 {
+    @include custom-font($fz-xsm , 300, #007ea7);
+}
+.body-text {
+    @include custom-font($fz-xsm, 300, #007ea7);
+}
+
+i{
+    color:#003459;
+}
+
+.typewriter-text {
+    color: #003459 !important;
+}
+
+/*** NavBar ***/
+
+.navbar {
+    background-color: rgba(0,168,232,0.7);
+    height: 100vh;
+    display: block;
+    padding: 10px 0px 0px;
+    z-index: 100;
+    box-shadow: -1.95px 1.95px 2.6px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 99;
+
+
+    #nav-brand-image {
+        border-radius: 50%;
+        transform: rotate(-20deg);
+        border: 4px solid white;
+        border-right-color:white;
+        border-bottom-color:white;
+        border-top-color:white;
+        border-left-color:white;
+        width: 70%;
+        margin: 20px auto 10px;
+        justify-content: center;
+        display: block;
+    }
+
+    .navbar-toggler-container {
+        padding: 16px 16px ;
+        border-top: 1px solid white;
+        border-bottom: 1px solid white;
+        margin-top: 20px;
+
+        .navbar-toggler {
+            padding: 0px;
+            font-size: 1.25rem;
+            line-height: 1;
+            background-color: transparent;
+            border: 1px solid transparent;
+            border-radius: .25rem;
+            transition: box-shadow .15s ease-in-out;
+            position: relative;
+            top:-4px;
+            float: right;
+        }
+
+        .navbar-toggler:focus {
+            box-shadow: none;
+        }
+
+        .navbar-icons {
+            font-size: 1.15rem;
+        }
+
+    }
+    
+    .navbar-nav {
+        margin: 30px 16px;
+
+        .nav-item {
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            
+            .nav-link {
+                margin: auto;
+                margin-bottom: 1.5vh;
+                display: inline-block;
+                padding: 0.5rem 0rem;
+                position: relative;
+            }
+            .nav-link::after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 2px;
+                background: #003459;
+                bottom:-2px;
+                left:0px;
+                transform: scale(0);
+                transition: transform 400ms ease-in-out;
+            }
+        }
+
+        .nav-item:hover {
+            .nav-link::after {
+                transform: scale(1);
+                transition: transform 400ms ease-in-out;
+            }
+        }
+        
+    }
+
+    .navbar-contact-container {
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        
+        &-item {
+            margin: 0px 6px;
+            top:0px;
+            transition: top 300ms ease-in-out;    
+        
+            &-item:hover {
+                position: relative;
+                top:-3px;
+                transition: top 300ms ease-in-out;
+            }
+        }
+    }
+}
+
+
+/*** PageLayout ***/
+
+#main-container {
+    max-width: 1440px;
+    margin: auto;
+    position: relative;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url(./assets/images/low-poly-grid-haikei.svg);
+    background-position: 0px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity: 0.4;
+    left: 0px;
+}
+
+#sub-container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+#content-box {
+    background-color:rgba(255,255,255,0.7);
+    z-index: 99;
+    box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.05);
+}
+
+/*** Left Vertical Contact ***/
+
+.contact-container {
+    position: absolute;
+    bottom: 90px;
+    left:51px;
+    right: auto;
+    
+
+    &-item {
+        display: block;
+        padding: 9px 0px;
+        position: relative;
+        top:0px;
+        transition: top 300ms ease-in-out;
+        &-icon {
+            font-size: 20px;
+            
+        }
+    }
+
+    &-item:hover {
+        top:-3px;
+        transition: top 300ms ease-in-out;
+    }
+}
+
+/*** Vertical Lines ***/
+
+.corner-line {
+
+    &-left {
+        position: absolute;
+        background: #003459;
+        width: 2px;
+        height: 80px;
+        bottom: 0px;
+        left:58px;
+        right: auto;
+    }
+
+    &-right {
+        position: absolute;
+        background: #003459;
+        width: 2px;
+        height: 80px;
+        bottom: 0px;
+        right:58px;
+    }
+}
+
+/*** Right Vertical Contact ***/
+
+.contact-container-email {
+    position: absolute;
+    bottom: 163px;
+    right:-17px;
+    left: auto;
+
+    &-item {
+        color: #003459;
+        text-decoration: none;
+        position: relative;
+        top:0px;
+        transition: top 300ms ease-in-out;
+
+        &-text {
+            display: inline-block;
+            transform: rotate(90deg);
+        }
+    }
+
+    &-item:hover {
+        position: relative;
+        top:-3px;
+        color: #003459;
+        transition: top 300ms ease-in-out;
+    }
+    
+}
+
+/*** Media Queries ***/
+
+@media(min-width:992px) {
+    #navbarNav, .navbar-nav {
+        display: block !important;
+        margin-top: 10vh;
+    }
+    .navbar-toggler-container {
+        display: none;
+    }
+    .nav-link {
+        text-align: center;
+    }
+    
+}
+
+@media(max-width:992px) {
+    .navbar {
+        height: 100%;
+
+        #nav-brand-image {
+            width: 200px;
+        }
+    }
+    .navbar .navbar-nav .nav-item {
+        text-align: right;
+    }
+    .contact-container-email {
+        display: none;
+    }
+    #content-box {
+        background:rgb(255,255,255);
+    }
+
+    .navbar-contact-container {
+        display: none;
+    }
+    
+}
+
+@media (max-width: 993px) {
+
+    .navbar-contact-container {
+        display: none;
+    }
+}
+
+
+@media (min-width: 1400px)  {
+
+    .navbar-contact-container {
+        display: none;
+    }
+}
+
+
+@media (max-width:1400px) {
+    .contact-container {
+        display: none;
+    }
+    .contact-container-email {
+        display: none;
+    }
+    .corner-line {
+        display: none;
+    }
+}
