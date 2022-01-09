@@ -11,7 +11,7 @@ body {
 /*** Fonts ***/
 h1,h2,h3,h4,h5,h6,p {
     color: #007ea7;
-    line-height: 1.5;
+    line-height: 1.9;
 }
 .fw-400 {
     font-weight: 400;
@@ -24,17 +24,18 @@ h1,h2,h3,h4,h5,h6,p {
 }
 
 $fz-xsm: 1rem;
-$fz-sm: 1.25rem;
-$fz-md: 2rem;
+$fz-sm: 1.20rem;
+$fz-md: 1.75rem;
 $fz-lg: 2.5rem;
 $fz-xl: 2.75rem;
 $fz-xxl: 3rem;
-$fz-heading: 3.25rem;
+$fz-heading: 3.15rem;
 
 @mixin custom-font($fontsize, $fontweight, $fontcolor){
     color: $fontcolor;
     font-size: $fontsize;
     font-weight: $fontweight;
+    // line-height: 1.9
 }
 .page-title {
     @include custom-font($fz-heading , 400, #007ea7);
@@ -68,6 +69,11 @@ i{
 .typewriter-text {
     color: #003459 !important;
 }
+
+.highlighter {
+    color: #00abee;
+}
+
 
 /*** NavBar ***/
 
@@ -139,7 +145,14 @@ i{
                 display: inline-block;
                 padding: 0.5rem 0rem;
                 position: relative;
+                color: white;
             }
+            
+            .active {
+                color: #003459;
+                transition: color 400ms ease-in-out;
+            }
+
             .nav-link::after {
                 content: '';
                 position: absolute;
@@ -151,6 +164,7 @@ i{
                 transform: scale(0);
                 transition: transform 400ms ease-in-out;
             }
+            
         }
 
         .nav-item:hover {
@@ -161,6 +175,8 @@ i{
         }
         
     }
+
+
 
     .navbar-contact-container {
         position: absolute;
@@ -212,6 +228,7 @@ i{
     background-color:rgba(255,255,255,0.7);
     z-index: 99;
     box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.05);
+    padding: 6rem 3rem;
 }
 
 /*** Left Vertical Contact ***/
@@ -295,6 +312,37 @@ i{
     
 }
 
+// Home Buttons
+
+.home-btn {
+    border: 1px solid #007ea7;
+    padding: 10px 40px;
+    border-radius: 6px;
+}
+$colors: (
+    home-btn: #007ea7,
+);
+.home-btn:hover,
+.home-btn:focus {
+  box-shadow: inset 0 0 0 2em var(--hover);
+}
+@each $button, $color in $colors {
+    .#{$button} {
+      --color: #{$color};
+      --hover: #{$color};
+    }
+  }
+  .home-btn {  
+    color: var(--color);
+    transition: 0.65s;
+    
+    &:hover,
+    &:focus { 
+      border-color: var(--hover);
+      color: #fff;
+    }
+  }
+
 /*** Media Queries ***/
 
 @media(min-width:992px) {
@@ -331,6 +379,10 @@ i{
 
     .navbar-contact-container {
         display: none;
+    }
+
+    #content-box {
+        padding: 2rem 2rem;
     }
     
 }

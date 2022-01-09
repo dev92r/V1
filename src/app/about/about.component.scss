@@ -1,0 +1,57 @@
+
+  .hex {
+    height: 120px;
+    width: 120px;
+    position: relative;
+    background: #007ea7;
+    -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    background-image: url(/src/assets/images/picture.jpg);
+    animation: blink 1800ms ease-in;
+  }
+
+  @keyframes blink {
+    0% {
+        transform: rotate(-360deg);
+    } 
+  }
+
+
+  
+  .hex-icon {
+    position: absolute;
+    top:50%;left: 50%; transform: translate(-50%, -50%);
+    color: white;
+    font-size: 30px;
+}
+
+#hex-row {
+    margin-left: -40px;
+}
+
+@media (max-width:992px) {
+    // #hex-row {
+    //     margin-left: -40px;
+    // }
+    
+}
+
+@media (max-width:768px) {
+    #hex-row {
+        margin-left: 0px;
+    }
+
+    .col-12 {
+        padding: 0px;
+    }
+
+  .hex-container {
+    background:white;
+    padding: 20px 10px;
+    border-bottom: 1px solid #007ea7;
+  }
+  #hex-row .col-12:nth-child(1) .hex-container {
+    border-top: 1px solid #007ea7;
+  }
+
+}

@@ -15,7 +15,7 @@
   </div>
   <!-- Right Vertical Contact  -->
   <div class="contact-container-email">
-    <a class="contact-container-email-item" href="#"><span class="contact-container-email-item-text">dev92r@gmail.com</span></a>
+    <a class="contact-container-email-item" href="mailto:dev92r@gmail.com"><span class="contact-container-email-item-text">dev92r@gmail.com</span></a>
   </div>
 
     <div class="row">
@@ -23,69 +23,11 @@
             <div class="row">
               <!-- Navbar Container -->
               <div class="col-md-12 col-lg-3 col-xl-3 px-0 navbar-container">
-                  <!-- Navbar -->
-                    <nav class="navbar navbar-expand-lg">
-                          <!-- Navbar image -->
-                          <a class="navbar-brand" href="#"><img class="img-fluid" id="nav-brand-image" src="../assets/images/picture.jpg" alt="picture"></a>
-                          <h5 class="text-light text-center f-h5">DEVANATHA</h5>
-                          <div align="center">
-                            <ngtypewriter class="text-light text-center f-h5 typewriter-text" [StringList]='list' [speed]='1000'></ngtypewriter>
-                          </div>
-                          
-                          <!-- Navbar Toggler -->
-                          <div class="navbar-toggler-container">
-                            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                              <i class="fa fa-bars"></i>
-                            </button>
-                            <!-- Navbar Contact -->
-                            <div class="navbar-toggler-contact-container">
-                              <a href="#"><i class="fa fa-codepen me-4 navbar-icons" style="font-size: 19px"></i></a>
-                              <a href="#"><i class="fa fa-linkedin me-4 navbar-icons" style="font-size: 21px"></i></a>
-                              <a href="#"><i class="fa fa-github me-4 navbar-icons" style="font-size: 21px"></i></a>
-                              <a href="#"><i class="fa fa-instagram me-4 navbar-icons" style="font-size: 21px"></i></a>
-                              <a href="#"><i class="fa fa-envelope me-4 navbar-icons" style="font-size: 20px"></i></a>
-                            </div>
-                          </div>
-                          
-                          <!-- Navbar Routes -->
-                          <div class="collapse navbar-collapse d-lg-block" id="navbarNav">
-                            <ul class="navbar-nav">
-                              <li class="nav-item">
-                                <a class="nav-link fw-300 body-text text-light active" aria-current="page" href="#">ABOUT</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link fw-300 body-text text-light active" aria-current="page" href="#">EXPERIENCE</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link fw-300 body-text text-light active" aria-current="page" href="#">WORK</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link fw-300 body-text text-light active" aria-current="page" href="#">SKILLS</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link fw-300 body-text text-light active" aria-current="page" href="#">EDUCATION</a>
-                              </li>
-                              <li class="nav-item">
-                                <a class="nav-link fw-300 body-text text-light active" aria-current="page" href="#">CONTACT</a>
-                              </li>
-                            </ul>
-                          </div>
-
-                          <!-- Navbar Contact -->
-                          <div class="navbar-contact-container" align="center">
-                            <a class="navbar-contact-container-item" href="#"><i class="fa fa-codepen me-3 navbar-contact-container-item-icon" style="font-size: 19px"></i></a>
-                            <a class="navbar-contact-container-item" href="#"><i class="fa fa-linkedin me-3 navbar-contact-container-item-icon" style="font-size: 21px" ></i></a>
-                            <a class="navbar-contact-container-item" href="#"><i class="fa fa-github me-3 navbar-contact-container-item-icon" style="font-size: 21px"></i></a>
-                            <a class="navbar-contact-container-item" href="#"><i class="fa fa-instagram me-3 navbar-contact-container-item-icon" style="font-size: 21px"></i></a>
-                            <a class="navbar-contact-container-item" href="#"><i class="fa fa-envelope me-3 navbar-contact-container-item-icon" style="font-size: 20px"></i></a>
-                          </div>
-                      </nav>
+                  <app-navbar></app-navbar>
                 </div>
                 <!-- Content box -->
-                <div class="col-md-12 col-lg-9 col-xl-9 py-5 px-5" id="content-box">
-                    <h1 class="page-title">HI, I'M DEV,</h1>
-                    <h4 class="f-h4">a software engineer specialized in front-end web
-                      development and UI/UX enthusiast.</h4>
+                <div class="col-md-12 col-lg-9 col-xl-9" id="content-box">
+                      <router-outlet></router-outlet>
                 </div>
             </div>
         </div>

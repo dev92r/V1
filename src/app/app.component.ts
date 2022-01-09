@@ -10,6 +10,4 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'myPortfolio';
   
-  list = ['SOFTWARE ENGINEER', 'FRONT-END DEVELOPER', 'UI/UX ENTHUSIAST',]
-  
 }
