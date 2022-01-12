@@ -9,9 +9,10 @@ body {
 }
 
 /*** Fonts ***/
-h1,h2,h3,h4,h5,h6,p {
+h1,h2,h3,h4,h5,h6,p,ul,li {
     color: #007ea7;
     line-height: 1.9;
+    font-weight: 300;
 }
 .fw-400 {
     font-weight: 400;
@@ -141,7 +142,7 @@ i{
             
             .nav-link {
                 margin: auto;
-                margin-bottom: 1.5vh;
+                // margin-bottom: 1.5vh;
                 display: inline-block;
                 padding: 0.5rem 0rem;
                 position: relative;
@@ -204,6 +205,7 @@ i{
     max-width: 1440px;
     margin: auto;
     position: relative;
+    height: 100vh;
 }
 
 .background {
@@ -214,7 +216,7 @@ i{
     background-position: 0px;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: cover;
+    background-size: auto;
     opacity: 0.4;
     left: 0px;
 }
@@ -228,9 +230,22 @@ i{
     background-color:rgba(255,255,255,0.7);
     z-index: 99;
     box-shadow: 1.95px 1.95px 2.6px rgba(0, 0, 0, 0.05);
-    padding: 6rem 3rem;
+    padding: 5rem 3rem 3rem 3rem;
+    height: 100vh;
+    overflow-y: auto;
 }
 
+#content-box::-webkit-scrollbar {
+    width: 4px;
+    overflow-y: scroll;
+    background: rgba(0,168,232,0.4);
+    box-shadow: inset 0 0 4px white;
+}
+
+#content-box::-webkit-scrollbar-thumb {
+    background: rgba(0, 168, 232);
+    border-radius: 10px;
+}
 /*** Left Vertical Contact ***/
 
 .contact-container {
@@ -413,4 +428,28 @@ $colors: (
     .corner-line {
         display: none;
     }
+}
+
+// Animations
+
+@keyframes frame {
+    0% {
+        width: 0px; 
+        height: 0px; 
+    }
+    100% {
+        width: 50px; 
+        height: 50px;
+    }
+}
+
+@keyframes pop-up {
+
+    100% {
+        transform: scale(1); 
+    }
+    0% {
+        transform: scale(0); 
+    }
+
 }
