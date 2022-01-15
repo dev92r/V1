@@ -12,30 +12,39 @@
     }
 }
 
+
 .work::before {
     Content: "";
-    width: 50px; 
-    height: 50px; 
+    width: 45px; 
+    height: 45px; 
     background: #007ea7;
     position: absolute;
     top:-4px;
     left:-4px;
     z-index: -1;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
     animation: frame .5s ease-in;
 }
 
 .work::after {
     Content: "";
-    width: 50px; 
-    height: 50px; 
+    width: 45px; 
+    height: 45px; 
     background: #007ea7;
     position: absolute;
     bottom:-4px;
     right:-4px;
     z-index: -1;
-    transition: all .5s ease-in-out;
+    transition: all .3s ease-in-out;
     animation: frame .5s ease-in;
 }
 
+.work-technology span {
+    line-height: 1.6;
+}
 
+.work-container:hover .work::before, .work-container:hover .work::after {
+    width: 52px; 
+    height: 53px;
+    transition: all .2s ease-in-out;
+}

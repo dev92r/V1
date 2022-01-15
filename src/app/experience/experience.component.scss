@@ -35,7 +35,7 @@
             i {
                 position: absolute;
                 color: #007ea7;
-                top:50%;
+                top:45%;
                 left: 50%;
                 transform: translate(-50%, -50%);
             }
@@ -86,5 +86,20 @@
         animation: frame .5s ease-in;
     }
 
+}
+
+.experience:hover {
+    .experience-i {
+        background: #007ea7;
+        transition: all .3s ease-in;
+        .experience-i-item {
+            i {
+                color: white;
+                transition: all .3s ease-in;
+            }
+        }
+        
+    }
+    
 }
 
