@@ -7,10 +7,10 @@
     -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
     background-image: url(/src/assets/images/picture.jpg);
-    animation: blink 1800ms ease-in;
+    animation: rotate 1000ms ease-in;
   }
 
-  @keyframes blink {
+  @keyframes rotate {
     0% {
         transform: rotate(-360deg);
     } 

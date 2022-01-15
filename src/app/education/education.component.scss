@@ -3,7 +3,6 @@
     position: relative;
     border-radius: 20px;
     animation: pop-up .5s ease-in;
-    
 
     &-icon {
         position: absolute;
@@ -27,5 +26,13 @@
         }
     }
 }
-
+.education-text-container:hover .education-text-ruler, .education-text-container:hover .education-text-ruler .education-text-ruler-icon {
+    background: #007ea7;
+    transition: all .4s ease-in-out;
+    
+}
+.education-text-container:hover .education-text-ruler .education-text-ruler-icon i {
+    color: white;
+    transition: all .4s ease-in-out;
+}
 
